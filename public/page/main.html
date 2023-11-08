@@ -4,9 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="../js/ScrollMagic.min.js"></script>
   <title>main</title>
 </head>
 <body>
-  dddd
+  <div class="wrap">
+    <header class="header">
+      <div class="header_inner">
+        <h1 class="header_logo"><a href="">NEXT LAB</a></h1>
+        <nav class="header_nav">
+          <ul class="header_nav_list">
+            <li class="active">
+              <a href="">Discover</a>
+            </li>
+            <li>
+              <a href="">Work</a>
+            </li>
+            <li>
+              <a href="">Build</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main_sec_0">
+        <div class="main_sec_0_inner">
+          <div class="main_sec_0_text">
+            <h1>Micro Webservice Platform</h1>
+            <p>
+              <strong>Next Lab</strong> 은 클라우드 환경을 기반으로
+              <br>대고객, 임직원, 설계사를 위한 디지털 전환 업무를 
+              <br>발굴하고 개발하고 있습니다.
+            </p>
+          </div>
+          <div class="main_sec_0_visual">
+
+          </div>
+        </div>
+      </section>
+      <section class="main_sec_1">
+        <div class="main_sec_1_text_list">
+          <div class="main_sec_1_text_item active">대고객 모바일 서비스를 제작해야하는데</div>
+          <div class="main_sec_1_text_item">서버, 도메인, 디자인은?</div>
+          <div class="main_sec_1_text_item">개발 후에 수정사항이 생기면 관리는 어떻게 해야하지?</div>
+          <div class="main_sec_1_text_item last">Next Lab은 <br>고민을 해결해 드리고 싶어요.</div>
+        </div>
+        <div class="main_sec_1_img_list">
+          <div class="main_sec_1_img_item"></div>
+          <div class="main_sec_1_img_item"></div>
+          <div class="main_sec_1_img_item"></div>
+          <div class="main_sec_1_img_item"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    import ScrollMagic from 'scrollmagic';
+// init controller
+const controller = new ScrollMagic.Controller();
+
+// build tween
+const tween = TweenMax.to("#animate", 0.5, {scale: 1.3, repeat: 5, yoyo: true});
+
+// build scene and set duration to window height
+const scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: "100%"})
+        .setTween(tween)
+        .addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+  </script>
 </body>
 </html>
