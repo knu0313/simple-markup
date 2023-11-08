@@ -1,0 +1,10 @@
+.test {
+  display: block;
+}
+  .test .dd {
+    display: inline-block;
+    height: inherit;
+  }
+body {
+  background-color: blue;
+}

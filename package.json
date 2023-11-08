@@ -1,0 +1,29 @@
+{
+  "name": "hli-nxl-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx postcss src/css --dir public/css --watch; npx http-server ./public -c-1 -p 8001 -a localhost",
+    "postcss": "npx postcss src/css --dir public/css --watch",
+    "serve": "npx live-server --open=public",
+    "start": "concurrently \"npm run postcss\" \"npm run serve\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-nested": "^6.0.1"
+  },
+  "browserslist": [">0.2%", "not dead", "not op_mini all"],
+  "dependencies": {
+    "scrollmagic": "^2.0.8"
+  }
+}
