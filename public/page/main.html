@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/main.css">
-  <script src="../js/ScrollMagic.min.js"></script>
+	<script type="text/javascript" src="../js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="../js/ScrollMagic.min.js"></script>
+	<script type="text/javascript" src="../js/animation.gsap.min.js"></script>
+	<script type="text/javascript" src="../js/debug.addIndicators.min.js"></script>
   <title>main</title>
 </head>
 <body>
@@ -33,7 +36,7 @@
     </header>
     <main class="main">
       <section class="main_sec_0">
-        <div class="main_sec_0_inner">
+        <div class="main_sec_inner">
           <div class="main_sec_0_text">
             <h1>Micro Webservice Platform</h1>
             <p>
@@ -43,39 +46,159 @@
             </p>
           </div>
           <div class="main_sec_0_visual">
-
+            <div class="main_sec_0_visual_object"></div>
+            <div class="main_sec_0_visual_object"></div>
+            <div class="main_sec_0_visual_object"></div>
+            <div class="main_sec_0_visual_object"></div>
+            <div class="main_sec_0_visual_object"></div>
           </div>
         </div>
       </section>
       <section class="main_sec_1">
-        <div class="main_sec_1_text_list">
-          <div class="main_sec_1_text_item active">대고객 모바일 서비스를 제작해야하는데</div>
-          <div class="main_sec_1_text_item">서버, 도메인, 디자인은?</div>
-          <div class="main_sec_1_text_item">개발 후에 수정사항이 생기면 관리는 어떻게 해야하지?</div>
-          <div class="main_sec_1_text_item last">Next Lab은 <br>고민을 해결해 드리고 싶어요.</div>
+        <div class="main_sec_1_inner">
+          <div id="s1_1_start"></div>
+          <div id="s1_2_start"></div>
+          <div id="s1_3_start"></div>
+          <div id="s1_4_start"></div>
+          <div id="s1_end"></div>
+          <div class="main_sec_1_text">
+            <div id="s1_text_list" class="main_sec_1_text_list">
+              <div class="main_sec_1_text_item">대고객 모바일 서비스를 제작해야하는데</div>
+              <div class="main_sec_1_text_item">서버, 도메인, 디자인은?</div>
+              <div class="main_sec_1_text_item">개발 후에 수정사항이 생기면 관리는 어떻게 해야하지?</div>
+            </div>
+            <div id="s1_text_last" class="main_sec_1_text_last">Next Lab은 <br>고민을 해결해 드리고 싶어요.</div>
+          </div>
+          <div class="main_sec_1_img_list">
+            <div class="main_sec_1_img_item"></div>
+            <div class="main_sec_1_img_item"></div>
+            <div class="main_sec_1_img_item"></div>
+            <div class="main_sec_1_img_item"></div>
+          </div>
         </div>
-        <div class="main_sec_1_img_list">
-          <div class="main_sec_1_img_item"></div>
-          <div class="main_sec_1_img_item"></div>
-          <div class="main_sec_1_img_item"></div>
-          <div class="main_sec_1_img_item"></div>
+      </section>
+      <section class="main_sec_2">
+        <div class="main_sec_inner">
+          <h1>Discover Next Lab.</h1>
+          <div class="main_sec_2_description">
+            <div class="main_sec_2_description_text">
+              <h2>Open Sales <br>Service Platform</h2>
+              <p>
+                보안, 서비스 확장성, 관리 편의성을 고려한
+                <br>퍼블릭 클라우드 환경의
+                <br>모바일 세일즈・서비스 채널플랫폼 구축
+              </p>
+            </div>
+            <div class="main_sec_2_description_img">
+              <img src="../img/main/platform.svg" alt="Open Sales Service Platform 설명">
+            </div>
+          </div>
+          <div class="main_sec_2_rolling">
+            <div class="main_sec_2_rolling_list">
+              <img src="../img/ci/chromatic.svg" alt="chromatic">
+              <img src="../img/ci/react.svg" alt="react">
+              <img src="../img/ci/figma.svg" alt="figma">
+              <img src="../img/ci/storybook.svg" alt="storybook">
+              <img src="../img/ci/gitlab.svg" alt="gitlab">
+              <img src="../img/ci/spring.svg" alt="spring">
+              <img src="../img/ci/navercloud.svg" alt="naver cloud">
+              <img src="../img/ci/mui.svg" alt="material ui">
+              <img src="../img/ci/argo.svg" alt="argo">
+              <img src="../img/ci/kubernetes.svg" alt="kubernetes">
+            </div>
+            <div class="main_sec_2_rolling_list dummy">
+              <img src="../img/ci/chromatic.svg" alt="chromatic">
+              <img src="../img/ci/react.svg" alt="react">
+              <img src="../img/ci/figma.svg" alt="figma">
+              <img src="../img/ci/storybook.svg" alt="storybook">
+              <img src="../img/ci/gitlab.svg" alt="gitlab">
+              <img src="../img/ci/spring.svg" alt="spring">
+              <img src="../img/ci/navercloud.svg" alt="naver cloud">
+              <img src="../img/ci/mui.svg" alt="material ui">
+              <img src="../img/ci/argo.svg" alt="argo">
+              <img src="../img/ci/kubernetes.svg" alt="kubernetes">
+            </div>
+          </div>
+          <div class="main_sec_2_info_box">
+            <div class="main_sec_2_info_box_item">
+              <h2>Digital Experience</h2>
+              <p>
+                디자인 시스템 기반의 공통 UI 표준 가이드와 react 환경에 최적화
+              </p>
+              <p>
+                한화생명의 Identity를 반영한 일관성 있는 Look&Feel 제공
+              </p>
+            </div>
+            <div class="main_sec_2_info_box_item">
+              <h2>IT Modernization</h2>
+              <p>
+                오픈소스 기반 최적의 개발 환경을 제공하는 “Next Lab 프레임워크"적용
+              </p>
+              <p>
+                Mobilefirst 기준 테블릿, PC 전 디바이스에서의 단절 없는 옴니채널 서비스 구현
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main_sec_3">
+        <div class="main_sec_inner">
+          <h1>Our Work.</h1>
+          <p>임직원, 설계사 업무 향상을 위한 클라우드 모바일웹 서비스 지원</p>
+          <div class="main_sec_3_link_box">
+            <a href="">
+              <strong>통합관리자 &amp; Dasbboard</strong>
+              <span>공통 코드 관리 기능로 효율적인 업무관리</span>
+            </a>
+            <a href="">
+              <strong>GA모바일위촉</strong>
+              <span>더 쉽고 빠른 단계별 관리 및 승인</span>
+            </a>
+            <a href="">
+              <strong>보장분석</strong>
+              <span>화면 개선과 컨설팅 서비스 고도화</span>
+            </a>
+            <a href="">
+              <strong>모바일 알릴의무사항</strong>
+              <span>설계사, 고객 모두의 편의성을 높인 사전 언더라이팅</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
   </div>
   <script>
-    import ScrollMagic from 'scrollmagic';
-// init controller
-const controller = new ScrollMagic.Controller();
+    // section 0
+    window.onload = () => {
+      setTimeout(() => {
+        document.getElementsByClassName('main_sec_0')[0].classList.add('main_sec_0_animate');
+      }, 500)
+    }
+    
+    // init controller  
+    const controller = new ScrollMagic.Controller();
 
-// build tween
-const tween = TweenMax.to("#animate", 0.5, {scale: 1.3, repeat: 5, yoyo: true});
-
-// build scene and set duration to window height
-const scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: "100%"})
-        .setTween(tween)
-        .addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
+    // section 1
+    const s1TextAni = {
+      start: {scale: 1.25, color: "rgba(255, 255, 255, 1)"},
+      end: {scale: 1, color: "rgba(255, 255, 255, .3)"}
+    };
+    const scene1_start = new ScrollMagic.Scene({triggerElement: "#s1_1_start", duration: "100%"}).addTo(controller);
+    const scene1_end = new ScrollMagic.Scene({triggerElement: "#s1_2_start", duration: "100%"}).addTo(controller);
+    const scene2_start = new ScrollMagic.Scene({triggerElement: "#s1_2_start", duration: "100%"}).addTo(controller);
+    const scene2_end = new ScrollMagic.Scene({triggerElement: "#s1_3_start", duration: "100%"}).addTo(controller);
+    const scene3_start = new ScrollMagic.Scene({triggerElement: "#s1_3_start", duration: "100%"}).addTo(controller);
+    const scene3_end = new ScrollMagic.Scene({triggerElement: "#s1_4_start", duration: "100%"}).addTo(controller);
+    const scene4_text_end = new ScrollMagic.Scene({triggerElement: "#s1_4_start", duration: "70%"}).addTo(controller);
+    const scene4_start = new ScrollMagic.Scene({triggerElement: "#s1_4_start", duration: "100%"}).addTo(controller);
+    scene1_start.setTween("#s1_text_list>:nth-child(1)", 0.5, s1TextAni.start);
+    scene1_end.setTween("#s1_text_list>:nth-child(1)", 0.5, s1TextAni.end);
+    scene2_start.setTween("#s1_text_list>:nth-child(2)", 0.5, s1TextAni.start);
+    scene2_end.setTween("#s1_text_list>:nth-child(2)", 0.5, s1TextAni.end);
+    scene3_start.setTween("#s1_text_list>:nth-child(3)", 0.5, s1TextAni.start);
+    scene3_end.setTween("#s1_text_list>:nth-child(3)", 0.5, s1TextAni.end);
+    scene4_text_end.setTween("#s1_text_list", 0.5, { opacity: 0 });
+    scene4_start.setTween("#s1_text_last", 0.5, { color: 'rgba(255, 255, 255, 1)'});
   </script>
 </body>
 </html>
