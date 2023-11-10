@@ -6,7 +6,7 @@ body {
   font-weight: 300;
   color: #272B2F;
 }
-h1, h2, h3, h4, h5, div, strong, span, main, header, ul, li, a {
+h1, h2, h3, h4, h5, div, strong, span, p, main, header, ul, ol, li, a, em, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, div, strong, span, main, header, ul, li, a {
   line-height: inherit;
   font-weight: inherit;
   text-decoration: none;
+  font-style: normal;
 }
 ul, ol {
   list-style: none;
@@ -29,12 +30,30 @@ ul, ol {
 /* header */
 .header {
   z-index: 100;
+  margin-bottom: -109px;
   position: -webkit-sticky;
   position: sticky;
   left: 0;
   top: 0;
-  color: #fff;
+  background-color: #fff;
+  color: #272B2F;
+  border-bottom: 1px solid rgba(140, 149, 157, 0.24);
+  transition: background-color .2s;
 }
+.header .header_logo {
+    display: flex;
+    position: relative;
+    width: 184px;
+    height: 36px;
+    overflow: hidden;
+  }
+.header .header_logo svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: #272B2F;
+      transition: fill 1s;
+    }
 .header .header_inner {
     height: 108px;
     flex: none;
@@ -54,9 +73,42 @@ ul, ol {
       line-height: 24px;
       font-weight: 300;
     }
-.header .header_nav_list li:hover {
+.header .header_nav_list li a {
+        transition: color .2s;
+      }
+.header .header_nav_list li a:focus {
+          color: #FF6600;
+        }
+.header .header_nav_list li:hover, .header .header_nav_list li.active {
         color: #FF6600;
       }
-.header .header_nav_list li.active {
-        color: #FF6600;
+.header .header_logo {
+    width: 184px;
+    height: 36px;
+  }
+.header.onTop {
+    background-color: transparent;
+    color: #fff;
+  }
+.header.onTop .header_logo svg {
+        fill: #fff;
       }
+
+/* footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  background-color: #000;
+  padding: 40px 0 80px;
+}
+.footer_copy {
+  font-size: 16px;
+  line-height: 24px;
+  color: #737C85;
+}
+.footer_logo {
+  margin-top: 8px;
+}
