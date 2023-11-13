@@ -1,8 +1,12 @@
+.header {
+  margin-bottom: -109px;
+}
 .main_sec_inner {
   width: 1440px;
   padding: 0 24px;
   margin: 0 auto;
 }
+
 /* main_sec_0 */
 @keyframes updown {
   0% {
@@ -27,7 +31,6 @@
   }
 }
 .main_sec_0 {
-  margin-top: -108px;
   background-color: #0C0D0F;
   color: #fff;
   height: 100vh;

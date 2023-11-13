@@ -30,7 +30,6 @@ ul, ol {
 /* header */
 .header {
   z-index: 100;
-  margin-bottom: -109px;
   position: -webkit-sticky;
   position: sticky;
   left: 0;
