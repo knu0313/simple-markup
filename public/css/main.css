@@ -41,9 +41,6 @@
   margin-bottom: 201px;
 }
 .main_sec_0_text h1 {
-    font-size: 54px;
-    line-height: 81px;
-    font-weight: 700;
     margin-bottom: 32px;
     opacity: 0;
     transform: translateY(30px);
@@ -113,29 +110,29 @@
     transition-duration: 1.4s;
     transition-delay: .6s;
   }
-.main_sec_0_animate .main_sec_0_text h1 {
+.active-ani .main_sec_0_text h1 {
       opacity: 1;
       transform: translateY(0);
     }
-.main_sec_0_animate .main_sec_0_text p {
+.active-ani .main_sec_0_text p {
       opacity: 1;
       transform: translateY(0);
     }
-.main_sec_0_animate .main_sec_0_visual_object:nth-child(1) {
+.active-ani .main_sec_0_visual_object:nth-child(1) {
       opacity: 1;
     }
-.main_sec_0_animate .main_sec_0_visual_object:nth-child(2) {
+.active-ani .main_sec_0_visual_object:nth-child(2) {
       opacity: 1;
     }
-.main_sec_0_animate .main_sec_0_visual_object:nth-child(3) {
-      opacity: 1;
-      top: 0;
-    }
-.main_sec_0_animate .main_sec_0_visual_object:nth-child(4) {
+.active-ani .main_sec_0_visual_object:nth-child(3) {
       opacity: 1;
       top: 0;
     }
-.main_sec_0_animate .main_sec_0_visual_object:nth-child(5) {
+.active-ani .main_sec_0_visual_object:nth-child(4) {
+      opacity: 1;
+      top: 0;
+    }
+.active-ani .main_sec_0_visual_object:nth-child(5) {
       opacity: 1;
       left: 0;
     }
@@ -266,11 +263,9 @@
   padding-top: 240px;
 }
 .main_sec_2 h1 {
-    font-size: 48px;
-    line-height: 56px;
-    font-weight: 700;
+    display: flex;
+    justify-content: center;
     margin-bottom: 80px;
-    text-align: center;
   }
 .main_sec_2_description {
   display: flex;
@@ -383,11 +378,9 @@
   padding-bottom: 240px;
 }
 .main_sec_3 h1 {
-    font-size: 48px;
-    line-height: 56px;
-    font-weight: 700;
+    display: flex;
+    justify-content: center;
     margin-bottom: 16px;
-    text-align: center;
   }
 .main_sec_3 p {
     font-size: 24px;
@@ -499,9 +492,8 @@
   text-align: center;
 }
 .main_sec_4 h1 {
-    font-size: 48px;
-    line-height: 56px;
-    font-weight: 700;
+    display: flex;
+    justify-content: center;
     margin-bottom: 100px;
   }
 .main_sec_4 p {
@@ -579,9 +571,8 @@
   background: url(../img/main/sec5_bg.png) no-repeat center / cover;
 }
 .main_sec_5 h1 {
-    font-size: 48px;
-    line-height: 56px;
-    font-weight: 700;
+    display: flex;
+    justify-content: center;
   }
 .main_sec_5 p {
     margin-top: 24px;

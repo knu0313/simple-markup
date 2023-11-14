@@ -1,3 +1,4 @@
+// window.onload
 window.onload = () => {
   // header
   const header = document.querySelector('.header');
@@ -26,7 +27,7 @@ window.onload = () => {
 
   // section 0
   setTimeout(() => {
-    document.getElementsByClassName('main_sec_0')[0].classList.add('main_sec_0_animate');
+    document.getElementsByClassName('main_sec_0')[0].classList.add('active-ani');
   }, 500)
 
   // section 3

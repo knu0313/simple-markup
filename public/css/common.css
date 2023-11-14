@@ -16,6 +16,9 @@ h1, h2, h3, h4, h5, div, strong, span, p, main, header, ul, ol, li, a, em, ::bef
   text-decoration: none;
   font-style: normal;
 }
+img {
+  display: block;
+}
 ul, ol {
   list-style: none;
 }
