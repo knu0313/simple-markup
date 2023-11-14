@@ -20,7 +20,6 @@ window.onload = () => {
       e.preventDefault();
       const targetId = target.href.split('#').pop();
       const destination = document.getElementById(targetId);
-      console.log(destination.offsetTop);
       window.scrollTo({ top: destination.offsetTop, behavior: 'smooth' });
     });
   });
