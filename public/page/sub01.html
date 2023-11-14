@@ -1,138 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/sub.css" />
+    <title>sub01</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/sub.css">
-  <title>sub01</title>
-</head>
-
-<body>
-  <div class="wrap">
-    <header class="header forSub">
-      <div class="inner">
-        <h1 class="header_logo">
-          <a href="main.html" aria-label="NEXT LAB Home">
-            <svg width="184" height="36" viewBox="0 0 184 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.76664 28.9963H0L7.7985 7.01953H17.5619L9.76664 28.9963Z" fill="#EA5504" />
-              <mask id="mask0_899_10648" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="0" width="21"
-                height="29">
-                <path d="M36.0001 7.02L30.6271 0L20.722 7.02H23.4342L15.6035 29L25.3637 28.9968L33.1912 7.02H36.0001Z"
-                  fill="white" />
-              </mask>
-              <g mask="url(#mask0_899_10648)">
-                <path d="M38.6613 7.01017H13.0206L12.8789 5.61719H38.5196L38.6613 7.01017Z" fill="#EA5504" />
-                <path d="M38.6613 9.81291H13.0206L12.8789 8.41992H38.5196L38.6613 9.81291Z" fill="#EA5504" />
-                <path d="M38.6613 12.6144H13.0206L12.8789 11.2246H38.5196L38.6613 12.6144Z" fill="#EA5504" />
-                <path d="M38.6613 15.4203H13.0206L12.8789 14.0273H38.5196L38.6613 15.4203Z" fill="#EA5504" />
-                <path d="M38.6613 18.2231H13.0206L12.8789 16.8301H38.5196L38.6613 18.2231Z" fill="#EA5504" />
-                <path d="M38.6613 21.0238H13.0206L12.8789 19.6309H38.5196L38.6613 21.0238Z" fill="#EA5504" />
-                <path d="M38.6613 23.8305H13.0206L12.8789 22.4375H38.5196L38.6613 23.8305Z" fill="#EA5504" />
-                <path d="M38.6613 26.6313H13.0206L12.8789 25.2383H38.5196L38.6613 26.6313Z" fill="#EA5504" />
-                <path d="M38.6613 29.434H13.0206L12.8789 28.041H38.5196L38.6613 29.434Z" fill="#EA5504" />
-                <path d="M38.6613 4.20158H13.0206L12.8789 2.80859H38.5196L38.6613 4.20158Z" fill="#EA5504" />
-                <path d="M38.6613 1.38975H13.0206L12.8789 0H38.5196L38.6613 1.38975Z" fill="#EA5504" />
-              </g>
-              <path d="M15.6003 28.9963H25.3605L17.562 7.01953H7.80176L15.6003 28.9963Z" fill="#EE7800" />
-              <path
-                d="M60.8265 29.2877H55.5854L48.9652 17.5651V29.2877H44V9.75H49.241L55.8613 21.4726V9.75H60.8265V29.2877Z" />
-              <path d="M111.758 28.7877H106.793V13.1575H101V9.25H117.551V13.1575H111.758V28.7877Z" />
-              <path d="M131.59 25.3802H141.658V29.2877H126.625V9.75H131.59V25.3802Z" />
-              <path
-                d="M149.244 29.2877H143.865L151.175 9.75H156.691L164.001 29.2877H158.622L157.381 25.7988H150.485L149.244 29.2877ZM151.726 22.1704H156.14L153.933 15.6113L151.726 22.1704Z" />
-              <path
-                d="M165.932 9.75H176.966C178.768 9.75 180.092 10.164 180.938 10.992C181.784 11.8201 182.207 13.0807 182.207 14.774C182.207 15.8904 181.968 16.7975 181.49 17.4953C181.012 18.1931 180.423 18.6815 179.724 18.9606C181.214 19.37 182.225 20.3748 182.759 21.975C182.942 22.5519 183.034 23.2217 183.034 23.9846C183.034 25.8082 182.611 27.1479 181.766 28.0038C180.92 28.8598 179.596 29.2877 177.793 29.2877H165.932V9.75ZM177.242 15.3322C177.242 14.2158 176.69 13.6575 175.587 13.6575H170.897V17.5651H175.587C176.69 17.5651 177.242 17.0069 177.242 15.8904V15.3322ZM178.069 23.1473C178.069 22.0309 177.518 21.4726 176.414 21.4726H170.897V25.3802H176.414C177.518 25.3802 178.069 24.822 178.069 23.7055V23.1473Z" />
-              <path
-                d="M68.5502 21.3331V17.4255V17.0999V13.6575H78.8943V9.75H63.585V29.2877H78.8943V25.3802H68.5502V23.1333V21.3331Z" />
-              <path
-                d="M86.1905 9.75H80.7012L85.5745 17.4255H68.5503V21.3331H85.602L80.7012 29.0551H86.1905L92.3188 19.4026L86.1905 9.75Z"
-                fill="#EE7800" />
-              <path d="M93.2793 17.8954L98.4514 9.75H92.9621L90.5347 13.5738L93.2793 17.8954Z" />
-              <path d="M93.2793 20.9141L90.5347 25.2356L92.9621 29.0548H98.4514L93.2793 20.9141Z" />
-            </svg>
-          </a>
-        </h1>
-      </div>
-    </header>
-    <main class="main">
-      <section class="sub_sec_top sub01">
+  <body>
+    <div class="wrap">
+      <header class="header forSub">
         <div class="inner">
-          <div class="sub_sec_top_text">
-            <h1>보장분석 웹서비스</h1>
+          <h1 class="header_logo">
+            <a href="main.html" aria-label="NEXT LAB Home">
+              <svg
+                width="184"
+                height="36"
+                viewBox="0 0 184 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.76664 28.9963H0L7.7985 7.01953H17.5619L9.76664 28.9963Z"
+                  fill="#EA5504"
+                />
+                <mask
+                  id="mask0_899_10648"
+                  style="mask-type: luminance"
+                  maskUnits="userSpaceOnUse"
+                  x="15"
+                  y="0"
+                  width="21"
+                  height="29"
+                >
+                  <path
+                    d="M36.0001 7.02L30.6271 0L20.722 7.02H23.4342L15.6035 29L25.3637 28.9968L33.1912 7.02H36.0001Z"
+                    fill="white"
+                  />
+                </mask>
+                <g mask="url(#mask0_899_10648)">
+                  <path
+                    d="M38.6613 7.01017H13.0206L12.8789 5.61719H38.5196L38.6613 7.01017Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 9.81291H13.0206L12.8789 8.41992H38.5196L38.6613 9.81291Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 12.6144H13.0206L12.8789 11.2246H38.5196L38.6613 12.6144Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 15.4203H13.0206L12.8789 14.0273H38.5196L38.6613 15.4203Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 18.2231H13.0206L12.8789 16.8301H38.5196L38.6613 18.2231Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 21.0238H13.0206L12.8789 19.6309H38.5196L38.6613 21.0238Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 23.8305H13.0206L12.8789 22.4375H38.5196L38.6613 23.8305Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 26.6313H13.0206L12.8789 25.2383H38.5196L38.6613 26.6313Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 29.434H13.0206L12.8789 28.041H38.5196L38.6613 29.434Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 4.20158H13.0206L12.8789 2.80859H38.5196L38.6613 4.20158Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 1.38975H13.0206L12.8789 0H38.5196L38.6613 1.38975Z"
+                    fill="#EA5504"
+                  />
+                </g>
+                <path
+                  d="M15.6003 28.9963H25.3605L17.562 7.01953H7.80176L15.6003 28.9963Z"
+                  fill="#EE7800"
+                />
+                <path
+                  d="M60.8265 29.2877H55.5854L48.9652 17.5651V29.2877H44V9.75H49.241L55.8613 21.4726V9.75H60.8265V29.2877Z"
+                />
+                <path
+                  d="M111.758 28.7877H106.793V13.1575H101V9.25H117.551V13.1575H111.758V28.7877Z"
+                />
+                <path d="M131.59 25.3802H141.658V29.2877H126.625V9.75H131.59V25.3802Z" />
+                <path
+                  d="M149.244 29.2877H143.865L151.175 9.75H156.691L164.001 29.2877H158.622L157.381 25.7988H150.485L149.244 29.2877ZM151.726 22.1704H156.14L153.933 15.6113L151.726 22.1704Z"
+                />
+                <path
+                  d="M165.932 9.75H176.966C178.768 9.75 180.092 10.164 180.938 10.992C181.784 11.8201 182.207 13.0807 182.207 14.774C182.207 15.8904 181.968 16.7975 181.49 17.4953C181.012 18.1931 180.423 18.6815 179.724 18.9606C181.214 19.37 182.225 20.3748 182.759 21.975C182.942 22.5519 183.034 23.2217 183.034 23.9846C183.034 25.8082 182.611 27.1479 181.766 28.0038C180.92 28.8598 179.596 29.2877 177.793 29.2877H165.932V9.75ZM177.242 15.3322C177.242 14.2158 176.69 13.6575 175.587 13.6575H170.897V17.5651H175.587C176.69 17.5651 177.242 17.0069 177.242 15.8904V15.3322ZM178.069 23.1473C178.069 22.0309 177.518 21.4726 176.414 21.4726H170.897V25.3802H176.414C177.518 25.3802 178.069 24.822 178.069 23.7055V23.1473Z"
+                />
+                <path
+                  d="M68.5502 21.3331V17.4255V17.0999V13.6575H78.8943V9.75H63.585V29.2877H78.8943V25.3802H68.5502V23.1333V21.3331Z"
+                />
+                <path
+                  d="M86.1905 9.75H80.7012L85.5745 17.4255H68.5503V21.3331H85.602L80.7012 29.0551H86.1905L92.3188 19.4026L86.1905 9.75Z"
+                  fill="#EE7800"
+                />
+                <path
+                  d="M93.2793 17.8954L98.4514 9.75H92.9621L90.5347 13.5738L93.2793 17.8954Z"
+                />
+                <path
+                  d="M93.2793 20.9141L90.5347 25.2356L92.9621 29.0548H98.4514L93.2793 20.9141Z"
+                />
+              </svg>
+            </a>
+          </h1>
+        </div>
+      </header>
+      <main class="main">
+        <section class="sub_sec_top sub01">
+          <div class="inner">
+            <div class="sub_sec_top_text">
+              <h1>보장분석 웹서비스</h1>
+              <p>
+                고객 경험을 반영한 보장분석 화면 개선과
+                <br />보장분석 컨설팅 서비스 고도화
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="sub_sec_cont">
+          <div class="inner">
+            <h1>한화생명만의 새로운 보장분석</h1>
             <p>
-              고객 경험을 반영한 보장분석 화면 개선과
-              <br>보장분석 컨설팅 서비스 고도화
+              하나의 웹서비스로 PC(FP월드)와 태블릿(스마트플래너)에 최적화된 <br />해상도
+              및 기능 제공
             </p>
-          </div>
-        </div>
-      </section>
-      <section class="sub_sec_cont">
-        <div class="inner">
-          <h1>한화생명만의 새로운 보장분석</h1>
-          <p>하나의 웹서비스로 PC(FP월드)와 태블릿(스마트플래너)에 최적화된 <br>해상도 및 기능 제공</p>
-          <div class="sub_sec_img">
-            <img src="../img/sub/sub01_01.png" alt="하나의 웹서비스">
-          </div>
+            <div class="sub_sec_img">
+              <img src="../img/sub/sub01_01.png" alt="하나의 웹서비스" />
+            </div>
 
-          <div class="sub_des">
-            <div class="sub_des_text_wrap">
-              <div class="sub_des_text">
-                <h2>보장분석 정보 및 기능 고도화</h2>
-                <ul>
-                  <li>항암약물방사선치료, 산정특례 대상 등 트렌드에 맞는 최신 보장항목 10여 종 추가 분석</li>
-                  <li>별도 메뉴 이동 없이 고객 등록 및 정보 조회 동의를 보장분석 내에서 간편하게</li>
-                </ul>
+            <div class="sub_des">
+              <div class="sub_des_text_wrap">
+                <div class="sub_des_text">
+                  <h2>보장분석 정보 및 기능 고도화</h2>
+                  <ul>
+                    <li>
+                      항암약물방사선치료, 산정특례 대상 등 트렌드에 맞는 최신 보장항목
+                      10여 종 추가 분석
+                    </li>
+                    <li>
+                      별도 메뉴 이동 없이 고객 등록 및 정보 조회 동의를 보장분석 내에서
+                      간편하게
+                    </li>
+                  </ul>
+                </div>
+                <div class="sub_des_text">
+                  <h2>상품 비교 및 추천 기능 강화</h2>
+                  <ul>
+                    <li>
+                      신규 상품, 보유 상품 중 필요한 상품만 선택하고 자유롭게 순서를
+                      변경하여 한눈에 상품
+                    </li>
+                    <li>상품 추천 시 우선 추천 보장항목으로 부족한 보장 Top3 안내</li>
+                    <li>
+                      부족한 보장을 채워주는 추천형, 트렌드를 반영한 플랜형, 가입설계
+                      저장한 기 설계 등 3가지 유형의 강화된 상품 추천 방식 제공
+                    </li>
+                  </ul>
+                </div>
+                <div class="sub_des_text">
+                  <h2>Admin 기능 신설</h2>
+                  <ul>
+                    <li>
+                      관리자가 직접 보장항목별 필요금액 기준 및 상품 추천 로직 관리 가능
+                    </li>
+                    <li>보장항목별 안내자료 순서 설정 및 미리 보기 기능 제공</li>
+                    <li>보장분석 메뉴별 사용 통계 데이터 제공</li>
+                  </ul>
+                </div>
               </div>
-              <div class="sub_des_text">
-                <h2>상품 비교 및 추천 기능 강화</h2>
-                <ul>
-                  <li>신규 상품, 보유 상품 중 필요한 상품만 선택하고 자유롭게 순서를 변경하여 한눈에 상품</li>
-                  <li>상품 추천 시 우선 추천 보장항목으로 부족한 보장 Top3 안내</li>
-                  <li>부족한 보장을 채워주는 추천형, 트렌드를 반영한 플랜형, 가입설계 저장한 기 설계 등 3가지 유형의 강화된 상품 추천 방식 제공</li>
-                </ul>
-              </div>
-              <div class="sub_des_text">
-                <h2>Admin 기능 신설</h2>
-                <ul>
-                  <li>관리자가 직접 보장항목별 필요금액 기준 및 상품 추천 로직 관리 가능</li>
-                  <li>보장항목별 안내자료 순서 설정 및 미리 보기 기능 제공</li>
-                  <li>보장분석 메뉴별 사용 통계 데이터 제공</li>
-                </ul>
+              <div class="sub_des_img_wrap">
+                <div class="sub_des_img">
+                  <img src="../img/sub/sub01_02.png" role="presentation" />
+                </div>
+                <div class="sub_des_img">
+                  <img src="../img/sub/sub01_03.png" role="presentation" />
+                </div>
+                <div class="sub_des_img">
+                  <img src="../img/sub/sub01_04.png" role="presentation" />
+                </div>
               </div>
             </div>
-            <div class="sub_des_img_wrap">
-              <div class="sub_des_img">
-                <img src="../img/sub/sub01_02.png" role="presentation">
-              </div>
-              <div class="sub_des_img">
-                <img src="../img/sub/sub01_03.png" role="presentation">
-              </div>
-              <div class="sub_des_img">
-                <img src="../img/sub/sub01_04.png" role="presentation">
-              </div>
+          </div>
+        </section>
+        <section class="sub_sec_link">
+          <div class="inner">
+            <div class="sub_sec_link_box">
+              <a class="link" href="sub04.html"
+                ><span>통합관리자 &amp; Dasbboard</span></a
+              >
+              <a class="link" href="sub02.html"><span>GA모바일위촉</span></a>
+              <a class="link" href="sub01.html"><span>보장분석</span></a>
+              <a class="link" href="sub03.html"><span>모바일 알릴의무사항</span></a>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="sub_sec_link">
-        <div class="inner">
-          <div class="sub_sec_link_box">
-            <a class="link" href="sub04.html"><span>통합관리자 &amp; Dasbboard</span></a>
-            <a class="link" href="sub02.html"><span>GA모바일위촉</span></a>
-            <a class="link" href="sub01.html"><span>보장분석</span></a>
-            <a class="link" href="sub03.html"><span>모바일 알릴의무사항</span></a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <p class="footer_copy">© HANWHA LIFE Corp. All Rights Reserved.</p>
-      <img src="../img/footer_logo.svg" alt="NEXT LAB PLATFORM" class="footer_logo">
-    </footer>
-  </div>
-</body>
-<script type="text/javascript" src="../js/sub.js"></script>
-
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer_copy">© HANWHA LIFE Corp. All Rights Reserved.</p>
+        <img src="../img/footer_logo.svg" alt="NEXT LAB PLATFORM" class="footer_logo" />
+      </footer>
+    </div>
+  </body>
+  <script type="text/javascript" src="../js/sub.js"></script>
 </html>

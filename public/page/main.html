@@ -1,256 +1,323 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script type="text/javascript" src="../js/lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="../js/lib/ScrollMagic.min.js"></script>
+    <script type="text/javascript" src="../js/lib/animation.gsap.min.js"></script>
+    <title>main</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/main.css">
-  <script type="text/javascript" src="../js/lib/TweenMax.min.js"></script>
-  <script type="text/javascript" src="../js/lib/ScrollMagic.min.js"></script>
-  <script type="text/javascript" src="../js/lib/animation.gsap.min.js"></script>
-  <title>main</title>
-</head>
-
-<body>
-  <div class="wrap">
-    <header class="header onTop">
-      <div class="inner">
-        <h1 class="header_logo">
-          <a href="main.html" aria-label="NEXT LAB Home">
-            <svg width="184" height="36" viewBox="0 0 184 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.76664 28.9963H0L7.7985 7.01953H17.5619L9.76664 28.9963Z" fill="#EA5504" />
-              <mask id="mask0_899_10648" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="0" width="21"
-                height="29">
-                <path d="M36.0001 7.02L30.6271 0L20.722 7.02H23.4342L15.6035 29L25.3637 28.9968L33.1912 7.02H36.0001Z"
-                  fill="white" />
-              </mask>
-              <g mask="url(#mask0_899_10648)">
-                <path d="M38.6613 7.01017H13.0206L12.8789 5.61719H38.5196L38.6613 7.01017Z" fill="#EA5504" />
-                <path d="M38.6613 9.81291H13.0206L12.8789 8.41992H38.5196L38.6613 9.81291Z" fill="#EA5504" />
-                <path d="M38.6613 12.6144H13.0206L12.8789 11.2246H38.5196L38.6613 12.6144Z" fill="#EA5504" />
-                <path d="M38.6613 15.4203H13.0206L12.8789 14.0273H38.5196L38.6613 15.4203Z" fill="#EA5504" />
-                <path d="M38.6613 18.2231H13.0206L12.8789 16.8301H38.5196L38.6613 18.2231Z" fill="#EA5504" />
-                <path d="M38.6613 21.0238H13.0206L12.8789 19.6309H38.5196L38.6613 21.0238Z" fill="#EA5504" />
-                <path d="M38.6613 23.8305H13.0206L12.8789 22.4375H38.5196L38.6613 23.8305Z" fill="#EA5504" />
-                <path d="M38.6613 26.6313H13.0206L12.8789 25.2383H38.5196L38.6613 26.6313Z" fill="#EA5504" />
-                <path d="M38.6613 29.434H13.0206L12.8789 28.041H38.5196L38.6613 29.434Z" fill="#EA5504" />
-                <path d="M38.6613 4.20158H13.0206L12.8789 2.80859H38.5196L38.6613 4.20158Z" fill="#EA5504" />
-                <path d="M38.6613 1.38975H13.0206L12.8789 0H38.5196L38.6613 1.38975Z" fill="#EA5504" />
-              </g>
-              <path d="M15.6003 28.9963H25.3605L17.562 7.01953H7.80176L15.6003 28.9963Z" fill="#EE7800" />
-              <path
-                d="M60.8265 29.2877H55.5854L48.9652 17.5651V29.2877H44V9.75H49.241L55.8613 21.4726V9.75H60.8265V29.2877Z" />
-              <path d="M111.758 28.7877H106.793V13.1575H101V9.25H117.551V13.1575H111.758V28.7877Z" />
-              <path d="M131.59 25.3802H141.658V29.2877H126.625V9.75H131.59V25.3802Z" />
-              <path
-                d="M149.244 29.2877H143.865L151.175 9.75H156.691L164.001 29.2877H158.622L157.381 25.7988H150.485L149.244 29.2877ZM151.726 22.1704H156.14L153.933 15.6113L151.726 22.1704Z" />
-              <path
-                d="M165.932 9.75H176.966C178.768 9.75 180.092 10.164 180.938 10.992C181.784 11.8201 182.207 13.0807 182.207 14.774C182.207 15.8904 181.968 16.7975 181.49 17.4953C181.012 18.1931 180.423 18.6815 179.724 18.9606C181.214 19.37 182.225 20.3748 182.759 21.975C182.942 22.5519 183.034 23.2217 183.034 23.9846C183.034 25.8082 182.611 27.1479 181.766 28.0038C180.92 28.8598 179.596 29.2877 177.793 29.2877H165.932V9.75ZM177.242 15.3322C177.242 14.2158 176.69 13.6575 175.587 13.6575H170.897V17.5651H175.587C176.69 17.5651 177.242 17.0069 177.242 15.8904V15.3322ZM178.069 23.1473C178.069 22.0309 177.518 21.4726 176.414 21.4726H170.897V25.3802H176.414C177.518 25.3802 178.069 24.822 178.069 23.7055V23.1473Z" />
-              <path
-                d="M68.5502 21.3331V17.4255V17.0999V13.6575H78.8943V9.75H63.585V29.2877H78.8943V25.3802H68.5502V23.1333V21.3331Z" />
-              <path
-                d="M86.1905 9.75H80.7012L85.5745 17.4255H68.5503V21.3331H85.602L80.7012 29.0551H86.1905L92.3188 19.4026L86.1905 9.75Z"
-                fill="#EE7800" />
-              <path d="M93.2793 17.8954L98.4514 9.75H92.9621L90.5347 13.5738L93.2793 17.8954Z" />
-              <path d="M93.2793 20.9141L90.5347 25.2356L92.9621 29.0548H98.4514L93.2793 20.9141Z" />
-            </svg>
-          </a>
-        </h1>
-        <nav class="header_nav">
-          <ul class="header_nav_list">
-            <li>
-              <a href="#discover">Discover</a>
-            </li>
-            <li>
-              <a href="#work">Work</a>
-            </li>
-            <li>
-              <a href="#build">Build</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main class="main">
-      <!-- main_sec_0 -->
-      <section class="main_sec_0">
+  <body>
+    <div class="wrap">
+      <header class="header onTop">
         <div class="inner">
-          <div class="main_sec_0_text">
-            <h1>
-              <img src="../img/main/txt_1.svg" alt="Micro Webservice Platform">
-            </h1>
+          <h1 class="header_logo">
+            <a href="main.html" aria-label="NEXT LAB Home">
+              <svg
+                width="184"
+                height="36"
+                viewBox="0 0 184 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.76664 28.9963H0L7.7985 7.01953H17.5619L9.76664 28.9963Z"
+                  fill="#EA5504"
+                />
+                <mask
+                  id="mask0_899_10648"
+                  style="mask-type: luminance"
+                  maskUnits="userSpaceOnUse"
+                  x="15"
+                  y="0"
+                  width="21"
+                  height="29"
+                >
+                  <path
+                    d="M36.0001 7.02L30.6271 0L20.722 7.02H23.4342L15.6035 29L25.3637 28.9968L33.1912 7.02H36.0001Z"
+                    fill="white"
+                  />
+                </mask>
+                <g mask="url(#mask0_899_10648)">
+                  <path
+                    d="M38.6613 7.01017H13.0206L12.8789 5.61719H38.5196L38.6613 7.01017Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 9.81291H13.0206L12.8789 8.41992H38.5196L38.6613 9.81291Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 12.6144H13.0206L12.8789 11.2246H38.5196L38.6613 12.6144Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 15.4203H13.0206L12.8789 14.0273H38.5196L38.6613 15.4203Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 18.2231H13.0206L12.8789 16.8301H38.5196L38.6613 18.2231Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 21.0238H13.0206L12.8789 19.6309H38.5196L38.6613 21.0238Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 23.8305H13.0206L12.8789 22.4375H38.5196L38.6613 23.8305Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 26.6313H13.0206L12.8789 25.2383H38.5196L38.6613 26.6313Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 29.434H13.0206L12.8789 28.041H38.5196L38.6613 29.434Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 4.20158H13.0206L12.8789 2.80859H38.5196L38.6613 4.20158Z"
+                    fill="#EA5504"
+                  />
+                  <path
+                    d="M38.6613 1.38975H13.0206L12.8789 0H38.5196L38.6613 1.38975Z"
+                    fill="#EA5504"
+                  />
+                </g>
+                <path
+                  d="M15.6003 28.9963H25.3605L17.562 7.01953H7.80176L15.6003 28.9963Z"
+                  fill="#EE7800"
+                />
+                <path
+                  d="M60.8265 29.2877H55.5854L48.9652 17.5651V29.2877H44V9.75H49.241L55.8613 21.4726V9.75H60.8265V29.2877Z"
+                />
+                <path
+                  d="M111.758 28.7877H106.793V13.1575H101V9.25H117.551V13.1575H111.758V28.7877Z"
+                />
+                <path d="M131.59 25.3802H141.658V29.2877H126.625V9.75H131.59V25.3802Z" />
+                <path
+                  d="M149.244 29.2877H143.865L151.175 9.75H156.691L164.001 29.2877H158.622L157.381 25.7988H150.485L149.244 29.2877ZM151.726 22.1704H156.14L153.933 15.6113L151.726 22.1704Z"
+                />
+                <path
+                  d="M165.932 9.75H176.966C178.768 9.75 180.092 10.164 180.938 10.992C181.784 11.8201 182.207 13.0807 182.207 14.774C182.207 15.8904 181.968 16.7975 181.49 17.4953C181.012 18.1931 180.423 18.6815 179.724 18.9606C181.214 19.37 182.225 20.3748 182.759 21.975C182.942 22.5519 183.034 23.2217 183.034 23.9846C183.034 25.8082 182.611 27.1479 181.766 28.0038C180.92 28.8598 179.596 29.2877 177.793 29.2877H165.932V9.75ZM177.242 15.3322C177.242 14.2158 176.69 13.6575 175.587 13.6575H170.897V17.5651H175.587C176.69 17.5651 177.242 17.0069 177.242 15.8904V15.3322ZM178.069 23.1473C178.069 22.0309 177.518 21.4726 176.414 21.4726H170.897V25.3802H176.414C177.518 25.3802 178.069 24.822 178.069 23.7055V23.1473Z"
+                />
+                <path
+                  d="M68.5502 21.3331V17.4255V17.0999V13.6575H78.8943V9.75H63.585V29.2877H78.8943V25.3802H68.5502V23.1333V21.3331Z"
+                />
+                <path
+                  d="M86.1905 9.75H80.7012L85.5745 17.4255H68.5503V21.3331H85.602L80.7012 29.0551H86.1905L92.3188 19.4026L86.1905 9.75Z"
+                  fill="#EE7800"
+                />
+                <path
+                  d="M93.2793 17.8954L98.4514 9.75H92.9621L90.5347 13.5738L93.2793 17.8954Z"
+                />
+                <path
+                  d="M93.2793 20.9141L90.5347 25.2356L92.9621 29.0548H98.4514L93.2793 20.9141Z"
+                />
+              </svg>
+            </a>
+          </h1>
+          <nav class="header_nav">
+            <ul class="header_nav_list">
+              <li>
+                <a href="#discover">Discover</a>
+              </li>
+              <li>
+                <a href="#work">Work</a>
+              </li>
+              <li>
+                <a href="#build">Build</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <!-- main_sec_0 -->
+        <section class="main_sec_0">
+          <div class="inner">
+            <div class="main_sec_0_text">
+              <h1>
+                <img src="../img/main/txt_1.svg" alt="Micro Webservice Platform" />
+              </h1>
+              <p>
+                <strong>Next Lab</strong> 은 클라우드 환경을 기반으로 <br />대고객,
+                임직원, 설계사를 위한 디지털 전환 업무를 <br />발굴하고 개발하고 있습니다.
+              </p>
+            </div>
+            <div class="main_sec_0_visual">
+              <div class="main_sec_0_visual_object"></div>
+              <div class="main_sec_0_visual_object"></div>
+              <div class="main_sec_0_visual_object"></div>
+              <div class="main_sec_0_visual_object"></div>
+              <div class="main_sec_0_visual_object"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- main_sec_1 -->
+        <section class="main_sec_1">
+          <div class="main_sec_1_inner">
+            <div id="s1_1_start"></div>
+            <div id="s1_2_start"></div>
+            <div id="s1_3_start"></div>
+            <div id="s1_4_start"></div>
+            <div id="s1_end"></div>
+            <div class="main_sec_1_text">
+              <div id="s1_text_list" class="main_sec_1_text_list">
+                <div class="main_sec_1_text_item">
+                  대고객 모바일 서비스를 제작해야하는데
+                </div>
+                <div class="main_sec_1_text_item">서버, 도메인, 디자인은?</div>
+                <div class="main_sec_1_text_item">
+                  개발 후에 수정사항이 생기면 관리는 어떻게 해야하지?
+                </div>
+              </div>
+              <div id="s1_text_last" class="main_sec_1_text_last">
+                Next Lab은 <br />고민을 해결해 드리고 싶어요.
+              </div>
+            </div>
+            <div class="main_sec_1_img_list">
+              <div class="main_sec_1_img_item"></div>
+              <div class="main_sec_1_img_item"></div>
+              <div class="main_sec_1_img_item"></div>
+              <div class="main_sec_1_img_item"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- main_sec_2 -->
+        <section id="discover" class="main_sec_2">
+          <div class="inner">
+            <h1><img src="../img/main/txt_2.svg" alt="Discover Next Lab." /></h1>
+            <div class="main_sec_2_description">
+              <div class="main_sec_2_description_text">
+                <h2>Open Sales <br />Service Platform</h2>
+                <p>
+                  보안, 서비스 확장성, 관리 편의성을 고려한
+                  <br />퍼블릭 클라우드 환경의 <br />모바일 세일즈・서비스 채널플랫폼 구축
+                </p>
+              </div>
+              <div class="main_sec_2_description_img">
+                <img
+                  src="../img/main/platform.svg"
+                  alt="Open Sales Service Platform 설명"
+                />
+              </div>
+            </div>
+            <div class="main_sec_2_rolling">
+              <div class="main_sec_2_rolling_list">
+                <img src="../img/ci/chromatic.svg" alt="chromatic" />
+                <img src="../img/ci/react.svg" alt="react" />
+                <img src="../img/ci/figma.svg" alt="figma" />
+                <img src="../img/ci/storybook.svg" alt="storybook" />
+                <img src="../img/ci/gitlab.svg" alt="gitlab" />
+                <img src="../img/ci/spring.svg" alt="spring" />
+                <img src="../img/ci/navercloud.svg" alt="naver cloud" />
+                <img src="../img/ci/mui.svg" alt="material ui" />
+                <img src="../img/ci/argo.svg" alt="argo" />
+                <img src="../img/ci/kubernetes.svg" alt="kubernetes" />
+              </div>
+              <div class="main_sec_2_rolling_list dummy" aria-hidden="true">
+                <img src="../img/ci/chromatic.svg" alt="chromatic" />
+                <img src="../img/ci/react.svg" alt="react" />
+                <img src="../img/ci/figma.svg" alt="figma" />
+                <img src="../img/ci/storybook.svg" alt="storybook" />
+                <img src="../img/ci/gitlab.svg" alt="gitlab" />
+                <img src="../img/ci/spring.svg" alt="spring" />
+                <img src="../img/ci/navercloud.svg" alt="naver cloud" />
+                <img src="../img/ci/mui.svg" alt="material ui" />
+                <img src="../img/ci/argo.svg" alt="argo" />
+                <img src="../img/ci/kubernetes.svg" alt="kubernetes" />
+              </div>
+            </div>
+            <div class="main_sec_2_info_box">
+              <div class="main_sec_2_info_box_item">
+                <h2>Digital Experience</h2>
+                <p>디자인 시스템 기반의 공통 UI 표준 가이드와 react 환경에 최적화</p>
+                <p>한화생명의 Identity를 반영한 일관성 있는 Look&Feel 제공</p>
+              </div>
+              <div class="main_sec_2_info_box_item">
+                <h2>IT Modernization</h2>
+                <p>오픈소스 기반 최적의 개발 환경을 제공하는 “Next Lab 프레임워크"적용</p>
+                <p>
+                  Mobilefirst 기준 테블릿, PC 전 디바이스에서의 단절 없는 옴니채널 서비스
+                  구현
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- main_sec_3 -->
+        <section id="work" class="main_sec_3">
+          <div class="inner">
+            <h1><img src="../img/main/txt_3.svg" alt="Our Work." /></h1>
+            <p>임직원, 설계사 업무 향상을 위한 클라우드 모바일웹 서비스 지원</p>
+            <div class="main_sec_3_link_box">
+              <a class="link active" href="sub04.html">
+                <span class="view">VIEW</span>
+                <strong class="tit">통합관리자 &amp; Dasbboard</strong>
+                <span class="des">공통 코드 관리 기능로 효율적인 업무관리</span>
+              </a>
+              <a class="link" href="sub02.html">
+                <span class="view">VIEW</span>
+                <strong class="tit">GA모바일위촉</strong>
+                <span class="des">더 쉽고 빠른 단계별 관리 및 승인</span>
+              </a>
+              <a class="link" href="sub01.html">
+                <span class="view">VIEW</span>
+                <strong class="tit">보장분석</strong>
+                <span class="des">화면 개선과 컨설팅 서비스 고도화</span>
+              </a>
+              <a class="link" href="sub03.html">
+                <span class="view">VIEW</span>
+                <strong class="tit">모바일 알릴의무사항</strong>
+                <span class="des">설계사, 고객 모두의 편의성을 높인 사전 언더라이팅</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- main_sec_4 -->
+        <section id="build" class="main_sec_4">
+          <div class="inner">
+            <h1><img src="../img/main/txt_4.svg" alt="Build Your Service" /></h1>
+            <ol class="main_sec_4_process_list">
+              <li>Next Lab 접수</li>
+              <li>Circle SR 협의</li>
+              <li>일정 수립 및 설계</li>
+              <li>표준 CI/CD 준수 <br />공통 domain 생성</li>
+              <li>Figma, React <br />공통 UI 적용</li>
+              <li>관리자 가이드 지원</li>
+              <li class="arrow" role="presentation"></li>
+            </ol>
             <p>
-              <strong>Next Lab</strong> 은 클라우드 환경을 기반으로
-              <br>대고객, 임직원, 설계사를 위한 디지털 전환 업무를
-              <br>발굴하고 개발하고 있습니다.
+              Next Lab 개발 표준에 따라 Component 기반의
+              <em>빠른 설계, 품질 완성도</em> 확보
             </p>
           </div>
-          <div class="main_sec_0_visual">
-            <div class="main_sec_0_visual_object"></div>
-            <div class="main_sec_0_visual_object"></div>
-            <div class="main_sec_0_visual_object"></div>
-            <div class="main_sec_0_visual_object"></div>
-            <div class="main_sec_0_visual_object"></div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- main_sec_1 -->
-      <section class="main_sec_1">
-        <div class="main_sec_1_inner">
-          <div id="s1_1_start"></div>
-          <div id="s1_2_start"></div>
-          <div id="s1_3_start"></div>
-          <div id="s1_4_start"></div>
-          <div id="s1_end"></div>
-          <div class="main_sec_1_text">
-            <div id="s1_text_list" class="main_sec_1_text_list">
-              <div class="main_sec_1_text_item">대고객 모바일 서비스를 제작해야하는데</div>
-              <div class="main_sec_1_text_item">서버, 도메인, 디자인은?</div>
-              <div class="main_sec_1_text_item">개발 후에 수정사항이 생기면 관리는 어떻게 해야하지?</div>
-            </div>
-            <div id="s1_text_last" class="main_sec_1_text_last">Next Lab은 <br>고민을 해결해 드리고 싶어요.</div>
-          </div>
-          <div class="main_sec_1_img_list">
-            <div class="main_sec_1_img_item"></div>
-            <div class="main_sec_1_img_item"></div>
-            <div class="main_sec_1_img_item"></div>
-            <div class="main_sec_1_img_item"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- main_sec_2 -->
-      <section id="discover" class="main_sec_2">
-        <div class="inner">
-          <h1><img src="../img/main/txt_2.svg" alt="Discover Next Lab."></h1>
-          <div class="main_sec_2_description">
-            <div class="main_sec_2_description_text">
-              <h2>Open Sales <br>Service Platform</h2>
-              <p>
-                보안, 서비스 확장성, 관리 편의성을 고려한
-                <br>퍼블릭 클라우드 환경의
-                <br>모바일 세일즈・서비스 채널플랫폼 구축
-              </p>
-            </div>
-            <div class="main_sec_2_description_img">
-              <img src="../img/main/platform.svg" alt="Open Sales Service Platform 설명">
-            </div>
-          </div>
-          <div class="main_sec_2_rolling">
-            <div class="main_sec_2_rolling_list">
-              <img src="../img/ci/chromatic.svg" alt="chromatic">
-              <img src="../img/ci/react.svg" alt="react">
-              <img src="../img/ci/figma.svg" alt="figma">
-              <img src="../img/ci/storybook.svg" alt="storybook">
-              <img src="../img/ci/gitlab.svg" alt="gitlab">
-              <img src="../img/ci/spring.svg" alt="spring">
-              <img src="../img/ci/navercloud.svg" alt="naver cloud">
-              <img src="../img/ci/mui.svg" alt="material ui">
-              <img src="../img/ci/argo.svg" alt="argo">
-              <img src="../img/ci/kubernetes.svg" alt="kubernetes">
-            </div>
-            <div class="main_sec_2_rolling_list dummy" aria-hidden="true">
-              <img src="../img/ci/chromatic.svg" alt="chromatic">
-              <img src="../img/ci/react.svg" alt="react">
-              <img src="../img/ci/figma.svg" alt="figma">
-              <img src="../img/ci/storybook.svg" alt="storybook">
-              <img src="../img/ci/gitlab.svg" alt="gitlab">
-              <img src="../img/ci/spring.svg" alt="spring">
-              <img src="../img/ci/navercloud.svg" alt="naver cloud">
-              <img src="../img/ci/mui.svg" alt="material ui">
-              <img src="../img/ci/argo.svg" alt="argo">
-              <img src="../img/ci/kubernetes.svg" alt="kubernetes">
-            </div>
-          </div>
-          <div class="main_sec_2_info_box">
-            <div class="main_sec_2_info_box_item">
-              <h2>Digital Experience</h2>
-              <p>
-                디자인 시스템 기반의 공통 UI 표준 가이드와 react 환경에 최적화
-              </p>
-              <p>
-                한화생명의 Identity를 반영한 일관성 있는 Look&Feel 제공
-              </p>
-            </div>
-            <div class="main_sec_2_info_box_item">
-              <h2>IT Modernization</h2>
-              <p>
-                오픈소스 기반 최적의 개발 환경을 제공하는 “Next Lab 프레임워크"적용
-              </p>
-              <p>
-                Mobilefirst 기준 테블릿, PC 전 디바이스에서의 단절 없는 옴니채널 서비스 구현
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- main_sec_3 -->
-      <section id="work" class="main_sec_3">
-        <div class="inner">
-          <h1><img src="../img/main/txt_3.svg" alt="Our Work."></h1>
-          <p>임직원, 설계사 업무 향상을 위한 클라우드 모바일웹 서비스 지원</p>
-          <div class="main_sec_3_link_box">
-            <a class="link active" href="sub04.html">
-              <span class="view">VIEW</span>
-              <strong class="tit">통합관리자 &amp; Dasbboard</strong>
-              <span class="des">공통 코드 관리 기능로 효율적인 업무관리</span>
-            </a>
-            <a class="link" href="sub02.html">
-              <span class="view">VIEW</span>
-              <strong class="tit">GA모바일위촉</strong>
-              <span class="des">더 쉽고 빠른 단계별 관리 및 승인</span>
-            </a>
-            <a class="link" href="sub01.html">
-              <span class="view">VIEW</span>
-              <strong class="tit">보장분석</strong>
-              <span class="des">화면 개선과 컨설팅 서비스 고도화</span>
-            </a>
-            <a class="link" href="sub03.html">
-              <span class="view">VIEW</span>
-              <strong class="tit">모바일 알릴의무사항</strong>
-              <span class="des">설계사, 고객 모두의 편의성을 높인 사전 언더라이팅</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- main_sec_4 -->
-      <section id="build" class="main_sec_4">
-        <div class="inner">
-          <h1><img src="../img/main/txt_4.svg" alt="Build Your Service"></h1>
-          <ol class="main_sec_4_process_list">
-            <li>Next Lab 접수</li>
-            <li>Circle SR 협의</li>
-            <li>일정 수립 및 설계</li>
-            <li>표준 CI/CD 준수 <br>공통 domain 생성</li>
-            <li>Figma, React <br>공통 UI 적용</li>
-            <li>관리자 가이드 지원</li>
-            <li class="arrow" role="presentation"></li>
-          </ol>
-          <p>Next Lab 개발 표준에 따라 Component 기반의 <em>빠른 설계, 품질 완성도</em> 확보</p>
-        </div>
-      </section>
-
-      <!-- main_sec_5 -->
-      <section id="contact" class="main_sec_5">
-        <h1><img src="../img/main/txt_5.svg" alt="Contact Us"></h1>
-        <p>Great vision without great people is irrelevant.</p>
-        <a href="mailto:nextlab@hanwha.com">nextlab@hanwha.com</a>
-      </section>
-
-    </main>
-    <footer class="footer">
-      <p class="footer_copy">© HANWHA LIFE Corp. All Rights Reserved.</p>
-      <img src="../img/footer_logo.svg" alt="NEXT LAB PLATFORM" class="footer_logo">
-    </footer>
-  </div>
-</body>
-<script type="text/javascript" src="../js/main.js"></script>
-
+        <!-- main_sec_5 -->
+        <section id="contact" class="main_sec_5">
+          <h1><img src="../img/main/txt_5.svg" alt="Contact Us" /></h1>
+          <p>Great vision without great people is irrelevant.</p>
+          <a href="mailto:nextlab@hanwha.com">nextlab@hanwha.com</a>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer_copy">© HANWHA LIFE Corp. All Rights Reserved.</p>
+        <img src="../img/footer_logo.svg" alt="NEXT LAB PLATFORM" class="footer_logo" />
+      </footer>
+    </div>
+  </body>
+  <script type="text/javascript" src="../js/main.js"></script>
 </html>
