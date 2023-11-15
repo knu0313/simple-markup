@@ -1,9 +1,27 @@
+/* font */
+@font-face {
+  font-family: "HanwhaGothic";
+  font-weight: 300;
+  src: url("/font/HanwhaGothicL.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HanwhaGothic";
+  font-weight: 400;
+  src: url("/font/HanwhaGothicR.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HanwhaGothic";
+  font-weight: 700;
+  src: url("/font/HanwhaGothicB.woff2") format("woff2");
+}
+
 /* reset */
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-weight: 300;
+  font-family: 'HanwhaGothic';
   color: #272B2F;
 }
 h1, h2, h3, h4, h5, div, strong, span, p, main, header, ul, ol, li, a, em, ::before, ::after {
@@ -78,6 +96,7 @@ ul, ol {
       font-size: 18px;
       line-height: 24px;
       font-weight: 300;
+      transform: skew(-.1deg);
       a {
         transition: color .2s;
         &:focus {
@@ -117,6 +136,7 @@ ul, ol {
 .footer_copy {
   font-size: 16px;
   line-height: 24px;
+  transform: skew(-.1deg);
   color: #737C85;
 }
 .footer_logo {

@@ -26,7 +26,9 @@ window.onload = () => {
 
   // section 0
   setTimeout(() => {
-    document.getElementsByClassName('main_sec_0')[0].classList.add('active-ani');
+    document
+      .getElementsByClassName('main_sec_0')[0]
+      .classList.add('active-ani');
   }, 500);
 
   // section 3
@@ -90,4 +92,6 @@ const scene4_start = new ScrollMagic.Scene({
   triggerElement: '#s1_4_start',
   duration: '100%'
 }).addTo(controller);
-scene4_start.setTween('#s1_text_last', 0.5, { color: 'rgba(255, 255, 255, 1)' });
+scene4_start.setTween('#s1_text_last', 0.5, {
+  color: 'rgba(255, 255, 255, 1)'
+});

@@ -32,11 +32,13 @@
     font-size: 48px;
     line-height: 56px;
     font-weight: 700;
+    transform: skew(-0.1deg);
     margin-bottom: 24px;
   }
   p {
     font-size: 24px;
     line-height: 36px;
+    transform: skew(-0.1deg);
     font-weight: 300;
   }
   .sub_sec_img {
@@ -57,11 +59,13 @@
     line-height: 60px;
     font-weight: 700;
     text-align: center;
+    transform: skew(-0.1deg);
   }
   p {
     font-size: 18px;
     line-height: 27px;
     text-align: center;
+    transform: skew(-0.1deg);
   }
 }
 .sub_sec_img {
@@ -82,8 +86,8 @@
 .sub_des_text {
   position: sticky;
   top: calc(50% - 121px);
-  padding-top: 48px;
-  height: 458px;
+  margin-top: 48px;
+  height: 410px;
   background-color: #fff;
   &::before {
     content: '';
@@ -100,6 +104,7 @@
     line-height: 48px;
     font-weight: 700;
     margin: 48px 0 32px;
+    transform: skew(-0.1deg);
   }
   li {
     font-size: 18px;
@@ -107,6 +112,7 @@
     color: #485059;
     padding-left: 16px;
     text-indent: -16px;
+    transform: skew(-0.1deg);
     &::before {
       content: '';
       display: inline-block;
@@ -139,10 +145,6 @@
       position: relative;
       width: 330px;
       height: 330px;
-      color: #fff;
-      font-size: 20px;
-      line-height: 30px;
-      font-weight: 700;
       background-size: cover;
       background-repeat: no-repeat;
       transform: translateY(200px);
@@ -158,6 +160,11 @@
         align-items: center;
         justify-content: center;
         gap: 11px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 700;
+        transform: skew(-0.1deg);
         &::after {
           content: '';
           display: block;

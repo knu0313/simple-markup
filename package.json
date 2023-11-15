@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx postcss src/css --dir public/css --watch; npx http-server ./public -c-1 -p 8001 -a localhost",
     "postcss": "npx postcss src --dir public/css --watch",
-    "serve": "npx live-server public",
-    "start": "concurrently \"npm run postcss\" \"npm run serve\""
+    "liveserver": "npx live-server public",
+    "start": "concurrently \"npm run postcss\" \"npm run liveserver\"",
+    "prettier": "npx prettier --write public/**/*.css"
   },
   "author": "",
   "license": "ISC",
