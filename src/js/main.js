@@ -51,43 +51,35 @@ const s1TextAni = {
   start: { scale: 1.25, color: 'rgba(255, 255, 255, 1)' },
   end: { scale: 1, color: 'rgba(255, 255, 255, .3)' }
 };
-const scene1_start = new ScrollMagic.Scene({
+new ScrollMagic.Scene({
   triggerElement: '#s1_1_start',
   duration: '100%'
-}).addTo(controller);
-scene1_start.setTween('#s1_text_list>:nth-child(1)', 0.5, s1TextAni.start);
-const scene1_end = new ScrollMagic.Scene({
+}).addTo(controller).setTween('#s1_text_list>:nth-child(1)', 0.5, s1TextAni.start);
+new ScrollMagic.Scene({
   triggerElement: '#s1_2_start',
   duration: '100%'
-}).addTo(controller);
-scene1_end.setTween('#s1_text_list>:nth-child(1)', 0.5, s1TextAni.end);
-const scene2_start = new ScrollMagic.Scene({
+}).addTo(controller).setTween('#s1_text_list>:nth-child(1)', 0.5, s1TextAni.end);
+new ScrollMagic.Scene({
   triggerElement: '#s1_2_start',
   duration: '100%'
-}).addTo(controller);
-scene2_start.setTween('#s1_text_list>:nth-child(2)', 0.5, s1TextAni.start);
-const scene2_end = new ScrollMagic.Scene({
+}).addTo(controller).setTween('#s1_text_list>:nth-child(2)', 0.5, s1TextAni.start);
+new ScrollMagic.Scene({
   triggerElement: '#s1_3_start',
   duration: '100%'
-}).addTo(controller);
-scene2_end.setTween('#s1_text_list>:nth-child(2)', 0.5, s1TextAni.end);
-const scene3_start = new ScrollMagic.Scene({
+}).addTo(controller).setTween('#s1_text_list>:nth-child(2)', 0.5, s1TextAni.end);
+new ScrollMagic.Scene({
   triggerElement: '#s1_3_start',
   duration: '100%'
-}).addTo(controller);
-scene3_start.setTween('#s1_text_list>:nth-child(3)', 0.5, s1TextAni.start);
-const scene3_end = new ScrollMagic.Scene({
+}).addTo(controller).setTween('#s1_text_list>:nth-child(3)', 0.5, s1TextAni.start);
+new ScrollMagic.Scene({
   triggerElement: '#s1_4_start',
   duration: '100%'
-}).addTo(controller);
-scene3_end.setTween('#s1_text_list>:nth-child(3)', 0.5, s1TextAni.end);
-const scene4_text_end = new ScrollMagic.Scene({
+}).addTo(controller).setTween('#s1_text_list>:nth-child(3)', 0.5, s1TextAni.end);
+new ScrollMagic.Scene({
   triggerElement: '#s1_4_start',
   duration: '70%'
-}).addTo(controller);
-scene4_text_end.setTween('#s1_text_list', 0.5, { opacity: 0 });
-const scene4_start = new ScrollMagic.Scene({
+}).addTo(controller).setTween('#s1_text_list', 0.5, { opacity: 0 });
+new ScrollMagic.Scene({
   triggerElement: '#s1_4_start',
   duration: '100%'
-}).addTo(controller);
-scene4_start.setTween('#s1_text_last', 0.5, { color: 'rgba(255, 255, 255, 1)' });
+}).addTo(controller).setTween('#s1_text_last', 0.5, { color: 'rgba(255, 255, 255, 1)' });
