@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently \"npm run postcss\" \"npm run babel\" \"npm run liveserver\"",
     "postcss": "npx postcss src --dir public/css --watch",
     "liveserver": "npx live-server public",
-    "start": "concurrently \"npm run postcss\" \"npm run liveserver\"",
-    "prettier": "npx prettier --write public/**/*.css"
+    "prettier": "npx prettier --write public/**/*.css",
+    "babel": "npx babel src/js -w --out-dir public/js"
   },
   "author": "",
   "license": "ISC",

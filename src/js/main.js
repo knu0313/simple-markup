@@ -1,5 +1,3 @@
-"use strict";
-
 // window.onload
 window.onload = () => {
   // header
@@ -16,15 +14,13 @@ window.onload = () => {
 
   // header nav
   const headerNavAnchor = header.querySelectorAll('.header_nav_list a');
-  headerNavAnchor.forEach(target => {
-    target.addEventListener('click', e => {
+
+  headerNavAnchor.forEach((target) => {
+    target.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = target.href.split('#').pop();
       const destination = document.getElementById(targetId);
-      window.scrollTo({
-        top: destination.offsetTop,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: destination.offsetTop, behavior: 'smooth' });
     });
   });
 
@@ -35,19 +31,13 @@ window.onload = () => {
 
   // section 3
   const sec3Links = document.querySelectorAll('.main_sec_3_link_box .link');
-  const toggleActive = _ref => {
-    let {
-      target
-    } = _ref;
-    sec3Links.forEach(_ref2 => {
-      let {
-        classList
-      } = _ref2;
+  const toggleActive = ({ target }) => {
+    sec3Links.forEach(({ classList }) => {
       classList.remove('active');
     });
     target.classList.add('active');
   };
-  sec3Links.forEach(target => {
+  sec3Links.forEach((target) => {
     target.addEventListener('mouseenter', toggleActive);
     target.addEventListener('focus', toggleActive);
   });
@@ -58,14 +48,8 @@ const controller = new ScrollMagic.Controller();
 
 // section 1
 const s1TextAni = {
-  start: {
-    scale: 1.25,
-    color: 'rgba(255, 255, 255, 1)'
-  },
-  end: {
-    scale: 1,
-    color: 'rgba(255, 255, 255, .3)'
-  }
+  start: { scale: 1.25, color: 'rgba(255, 255, 255, 1)' },
+  end: { scale: 1, color: 'rgba(255, 255, 255, .3)' }
 };
 const scene1_start = new ScrollMagic.Scene({
   triggerElement: '#s1_1_start',
@@ -101,13 +85,9 @@ const scene4_text_end = new ScrollMagic.Scene({
   triggerElement: '#s1_4_start',
   duration: '70%'
 }).addTo(controller);
-scene4_text_end.setTween('#s1_text_list', 0.5, {
-  opacity: 0
-});
+scene4_text_end.setTween('#s1_text_list', 0.5, { opacity: 0 });
 const scene4_start = new ScrollMagic.Scene({
   triggerElement: '#s1_4_start',
   duration: '100%'
 }).addTo(controller);
-scene4_start.setTween('#s1_text_last', 0.5, {
-  color: 'rgba(255, 255, 255, 1)'
-});
+scene4_start.setTween('#s1_text_last', 0.5, { color: 'rgba(255, 255, 255, 1)' });
