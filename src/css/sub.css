@@ -84,8 +84,6 @@
   width: calc(50% - 12px);
 }
 .sub_des_text {
-  position: sticky;
-  top: calc(50% - 121px);
   margin-top: 48px;
   height: 410px;
   background-color: #fff;
